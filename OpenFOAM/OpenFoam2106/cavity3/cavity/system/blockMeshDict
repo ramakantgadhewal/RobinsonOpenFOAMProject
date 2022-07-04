@@ -1,0 +1,183 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   0.1;
+
+width  5;   // in x-axis
+
+xDivision   160;
+yDivision   20;
+
+xGrading    3;  // Ratio from Unit Square
+yGrading    1;
+
+
+
+vertices    // scale the x-axis by 2
+(
+    /*
+    (0 0 0) // 0
+    (#calc"2 * $width" 0 0)
+    (#calc"2 * $width" 1 0)
+    (0 1 0)
+    (0 0 0.1)   // 4
+    (#calc"2 * $width" 0 0.1)
+    (#calc"2 * $width" 1 0.1)
+    (0 1 0.1)
+    (#calc"4 * $width" 0 0) // 8
+    (#calc"4 * $width" 1 0)
+    (#calc"4 * $width" 1 0.1)
+    (#calc"4 * $width" 0 0.1)
+    (#calc"2 * $width" -1 0)    // 12 , third block
+    (#calc"4 * $width" -1 0)
+    (#calc"2 * $width" -1 0.1)
+    (#calc"4 * $width" -1 0.1) // 15
+    // new vertices
+    (#calc"2 * $width" 2 0) // 16
+    (#calc"4 * $width" 2 0) 
+    (#calc"2 * $width" 2 0.1)
+    (#calc"4 * $width" 2 0.1) 
+    */
+
+    
+    // Rescaled
+    (0 0 0) // 0
+    (#calc"1 * $width" 0 0)
+    (#calc"1 * $width" 1 0)
+    (0 1 0)
+    (0 0 0.1)   // 4
+    (#calc"1 * $width" 0 0.1)
+    (#calc"1 * $width" 1 0.1)
+    (0 1 0.1)
+    (#calc"4 * $width" 0 0) // 8
+    (#calc"4 * $width" 1 0)
+    (#calc"4 * $width" 1 0.1)
+    (#calc"4 * $width" 0 0.1)
+    (#calc"1 * $width" -1 0)    // 12 , third block
+    (#calc"4 * $width" -1 0)
+    (#calc"1 * $width" -1 0.1)
+    (#calc"4 * $width" -1 0.1) // 15
+    // new vertices
+    (#calc"1 * $width" 2 0) // 16
+    (#calc"4 * $width" 2 0) 
+    (#calc"1 * $width" 2 0.1)
+    (#calc"4 * $width" 2 0.1) 
+    
+);
+
+blocks  // double x-subdivisions
+(
+    hex (0 1 2 3 4 5 6 7) (#calc"$xDivision/2" #calc"$yDivision" 1) simpleGrading (1 1 1)  // first box
+    hex (1 8 9 2 5 11 10 6) (#calc"$xDivision" #calc"$yDivision" 1) simpleGrading (1 1 1)    // second box
+    hex (12 13 8 1 14 15 11 5) (#calc"$xDivision" #calc"$yDivision" 1) simpleGrading (1 1 1) // third box
+    hex (2 9 17 16 6 10 19 18) (#calc"$xDivision" #calc"$yDivision" 1) simpleGrading (1 1 1) // New box
+);
+
+edges
+(
+);
+
+boundary
+(
+    
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    
+
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (11 8 9 10)
+            (15 13 8 11)
+            (10 9 17 19)
+        );
+    }
+
+    /*  // Removed since no More symmetry
+    symmetry    
+    {
+        //type symmetry;
+        type patch;
+        faces
+        (
+            (6 2 3 7)
+            (10 9 2 6)
+        );
+    }
+    */
+
+    fixedWalls
+    {
+        type wall;
+        faces
+        (
+            (4 0 1 5)
+            (1 12 14 5)
+            (6 2 3 7)   // New
+            (16 2 6 18)
+        );
+    }
+
+    potentialWallTop   
+    {
+        type wall;
+        faces
+        (
+            (19 17 16 18)
+        );
+
+    }
+
+
+    potentialWallBot   // was potentialWall
+    {
+        type wall;
+        faces
+        (
+            (14 12 13 15)
+        );
+
+    }
+
+    frontAndBack    // All faces parallel perp to z-axis
+    {
+        type empty;
+        faces
+        (
+            (4 5 6 7)
+            (2 1 0 3)
+            (10 6 5 11)
+            (8 1 2 9)
+            (15 11 5 14)
+            (13 12 1 8)
+            (6 10 19 18)    // new
+            (9 2 16 17)
+        );
+    }
+
+    
+);
+
+
+// ************************************************************************* //

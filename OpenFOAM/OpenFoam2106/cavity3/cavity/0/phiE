@@ -1,0 +1,74 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2106                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      phiE;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+                // kg, m , s , K , mol , A, Light(?)
+dimensions      [1 2 -3 0 0 -1 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    inlet
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+
+    outlet
+    {
+        //type            fixedValue;
+        //value           uniform 0;
+        type        zeroGradient;
+    }
+/*
+    symmetry
+    {
+     //   type            symmetry;
+             type            zeroGradient; // original
+
+    }
+*/
+    fixedWalls
+    {
+        type            zeroGradient; // original
+        /*
+        type            fixedValue; // new
+        value           uniform 0;
+        */
+    }
+
+    potentialWallTop
+    {
+        //type            fixedValue;
+        //value           uniform 0;//uniform 8e-11;  // del ( phiE) =  1 volt [ideally]
+
+        type            zeroGradient;
+    }    
+
+
+    potentialWallBot   
+    {
+        type            fixedValue;
+        value           uniform -8e-10;  // del ( phiE) =  1 volt [ideally]
+    }    
+
+    frontAndBack
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
