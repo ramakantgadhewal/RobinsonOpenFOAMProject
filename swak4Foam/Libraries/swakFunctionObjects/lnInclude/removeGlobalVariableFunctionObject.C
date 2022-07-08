@@ -1,1 +1,0 @@
-../removeGlobalVariableFunctionObject.C

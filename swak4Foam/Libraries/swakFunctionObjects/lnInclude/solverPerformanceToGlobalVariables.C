@@ -1,1 +1,0 @@
-../solverPerformanceToGlobalVariables.C

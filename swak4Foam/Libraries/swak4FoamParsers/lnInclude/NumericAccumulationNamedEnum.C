@@ -1,1 +1,0 @@
-../namedEnums/NumericAccumulationNamedEnum.C

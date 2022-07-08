@@ -1,1 +1,0 @@
-../ExpressionResult/StoredStackExpressionResultI.H

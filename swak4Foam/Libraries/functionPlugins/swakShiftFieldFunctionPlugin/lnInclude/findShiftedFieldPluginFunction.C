@@ -1,1 +1,0 @@
-../findShiftedFieldPluginFunction.C

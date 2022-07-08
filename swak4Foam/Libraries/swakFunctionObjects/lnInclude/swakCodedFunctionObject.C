@@ -1,1 +1,0 @@
-../swakCodedFunctionObject.C

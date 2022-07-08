@@ -1,7 +1,0 @@
-generalInterpreterWrapper.C
-
-scriptableFvSolutionFvSchemesFunctionObject.C
-
-swakScriptableFvPatchFields.C
-
-LIB = $(FOAM_USER_LIBBIN)/libswakGeneralLanguageIntegration

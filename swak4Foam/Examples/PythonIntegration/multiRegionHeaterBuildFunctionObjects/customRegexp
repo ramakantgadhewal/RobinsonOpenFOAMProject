@@ -1,6 +1,0 @@
-setRegion {
-	  type phase;
-
-	  expr "Solving for (.+) region (.+)";
-	  idNr 2;
-}

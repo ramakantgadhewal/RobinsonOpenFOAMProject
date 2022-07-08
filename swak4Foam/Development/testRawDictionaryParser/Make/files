@@ -1,4 +1,0 @@
-testRawDictionaryParser.C
-DictionaryFoamDictionaryParserDriver.C
-
-EXE = $(FOAM_USER_APPBIN)/testRawDictionaryParser

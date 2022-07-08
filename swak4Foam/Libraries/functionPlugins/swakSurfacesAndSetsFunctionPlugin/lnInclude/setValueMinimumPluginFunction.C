@@ -1,1 +1,0 @@
-../setValueMinimumPluginFunction.C

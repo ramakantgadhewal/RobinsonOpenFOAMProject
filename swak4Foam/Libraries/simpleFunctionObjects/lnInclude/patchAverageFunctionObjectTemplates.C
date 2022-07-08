@@ -1,1 +1,0 @@
-../patch/patchAverageFunctionObject/patchAverageFunctionObjectTemplates.C

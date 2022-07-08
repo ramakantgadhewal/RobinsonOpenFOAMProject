@@ -1,4 +1,0 @@
-swakTransportModelsPluginFunction.C
-swakIncompressibleTurbulencePluginFunction.C
-
-LIB = $(FOAM_USER_LIBBIN)/libswakTransportTurbFunctionPlugin

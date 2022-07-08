@@ -1,1 +1,0 @@
-../groovyBCDirectionFvPatchField.C

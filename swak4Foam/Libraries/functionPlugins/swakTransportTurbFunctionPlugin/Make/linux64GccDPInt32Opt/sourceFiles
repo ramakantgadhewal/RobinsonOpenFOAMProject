@@ -1,5 +1,0 @@
-SOURCE = \
-swakTransportModelsPluginFunction.C \
-swakIncompressibleTurbulencePluginFunction.C \
-
-# sources

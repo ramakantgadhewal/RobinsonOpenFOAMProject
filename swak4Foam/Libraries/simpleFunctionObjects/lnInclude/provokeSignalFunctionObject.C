@@ -1,1 +1,0 @@
-../misc/provokeSignal/provokeSignalFunctionObject.C

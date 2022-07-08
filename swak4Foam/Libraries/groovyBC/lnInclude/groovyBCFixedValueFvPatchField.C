@@ -1,1 +1,0 @@
-../groovyBCFixedValueFvPatchField.C

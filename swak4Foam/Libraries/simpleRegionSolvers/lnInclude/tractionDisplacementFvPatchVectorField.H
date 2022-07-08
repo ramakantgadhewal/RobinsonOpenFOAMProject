@@ -1,1 +1,0 @@
-../originalBoundaryConditions/tractionDisplacementFvPatchVectorField.H

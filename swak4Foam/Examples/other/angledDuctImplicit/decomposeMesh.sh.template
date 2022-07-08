@@ -1,8 +1,0 @@
-#! /bin/bash
-
-
-<!--(if numberOfProcessors>1)-->
-pyFoamDecompose.py --clear . |-numberOfProcessors-|
-
-pyFoamRunner.py --auto topoSet -dict system/topoSetDict.decompose
-<!--(end)-->

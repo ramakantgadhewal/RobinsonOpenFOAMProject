@@ -1,4 +1,0 @@
-expressionSource.C
-forceEquation.C
-
-LIB = $(FOAM_USER_LIBBIN)/libswakSourceFields

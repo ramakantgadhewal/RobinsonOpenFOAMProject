@@ -1,1 +1,0 @@
-../lcFaceMinimumPluginFunction.H

@@ -1,1 +1,0 @@
-../setsAndSurfaces/swakRegistryProxySurface.C

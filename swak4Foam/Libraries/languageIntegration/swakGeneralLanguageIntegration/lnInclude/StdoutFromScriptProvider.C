@@ -1,1 +1,0 @@
-../StdoutFromScriptProvider.C

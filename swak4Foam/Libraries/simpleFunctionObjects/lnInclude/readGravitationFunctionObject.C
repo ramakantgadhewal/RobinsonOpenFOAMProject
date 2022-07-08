@@ -1,1 +1,0 @@
-../misc/readGravitation/readGravitationFunctionObject.C

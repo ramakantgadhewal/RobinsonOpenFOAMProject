@@ -1,3 +1,0 @@
-SwakScriptableInjections.C
-
-LIB = $(FOAM_USER_LIBBIN)/libswakScriptableLagrangian

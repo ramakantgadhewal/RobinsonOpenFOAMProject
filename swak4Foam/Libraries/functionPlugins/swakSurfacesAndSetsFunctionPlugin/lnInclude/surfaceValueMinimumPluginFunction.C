@@ -1,1 +1,0 @@
-../surfaceValueMinimumPluginFunction.C

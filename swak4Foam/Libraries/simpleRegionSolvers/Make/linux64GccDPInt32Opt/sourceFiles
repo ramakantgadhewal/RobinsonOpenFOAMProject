@@ -1,9 +1,0 @@
-SOURCE = \
-SimpleRegionSolverFunctionObject.C \
-HeatConductionRegionSolverFunctionObject.C \
-PotentialFlowRegionSolverFunctionObject.C \
-RhoPimpleFlowRegionSolverFunctionObject.C \
-SolidDisplacementRegionSolverFunctionObject.C \
-originalBoundaryConditions/tractionDisplacementFvPatchVectorField.C \
-
-# sources

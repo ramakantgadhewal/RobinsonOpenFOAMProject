@@ -1,3 +1,0 @@
-#!/bin/sh
-
-LUAROCKS_SYSCONFDIR='/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/etc/luarocks' exec '/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/bin/lua' -e 'package.path="/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/share/lua/5.3/?.lua;/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/share/lua/5.3/?/init.lua;"..package.path;package.cpath="/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/lib/lua/5.3/?.so;"..package.cpath;local k,l,_=pcall(require,"luarocks.loader") _=k and l.add_context("luarocks","3.2.1-1")' '/home/montana/RobinsonOpenFOAMProject/swak4Foam/privateRequirements/lib/luarocks/rocks-5.3/luarocks/3.2.1-1/bin/luarocks-admin' "$@"

@@ -1,5 +1,0 @@
-SOURCE = \
-swakThermophysicalPluginFunction.C \
-swakCompressibleTurbulencePluginFunction.C \
-
-# sources

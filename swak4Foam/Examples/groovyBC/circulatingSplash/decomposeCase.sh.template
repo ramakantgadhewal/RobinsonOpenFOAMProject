@@ -1,5 +1,0 @@
-#! /usr/bin/env bash
-
-<!--(if numberOfProcessors>0)-->
-decomposePar
-<!--(end)-->

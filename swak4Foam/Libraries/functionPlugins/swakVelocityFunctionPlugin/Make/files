@@ -1,5 +1,0 @@
-courantIncompressiblePluginFunction.C
-courantCompressiblePluginFunction.C
-streamFunctionPluginFunction.C
-
-LIB = $(FOAM_USER_LIBBIN)/libswakVelocityFunctionPlugin

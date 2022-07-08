@@ -1,1 +1,0 @@
-../general/writeIfSwakExpressionFunctionObject.C

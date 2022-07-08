@@ -1,2 +1,0 @@
-[SolverOutput]
-timeregexp = ^(Iteration) = (.+)$

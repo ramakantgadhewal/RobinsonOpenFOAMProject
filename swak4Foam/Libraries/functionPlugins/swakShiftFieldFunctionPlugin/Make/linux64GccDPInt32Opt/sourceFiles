@@ -1,9 +1,0 @@
-SOURCE = \
-shiftFieldGeneralPluginFunction.C \
-shiftFieldConstantVectorPluginFunction.C \
-shiftFieldConstantVectorDefaultValuePluginFunction.C \
-shiftFieldExpressionPluginFunction.C \
-shiftFieldExpressionDefaultValuePluginFunction.C \
-findShiftedFieldPluginFunction.C \
-
-# sources

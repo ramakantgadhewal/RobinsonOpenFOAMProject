@@ -1,1 +1,0 @@
-../groovyFixedNormalSlipPointPatchField.C

@@ -1,1 +1,0 @@
-../functionObjectProxy/executeIfPatchFunctionObject/executeIfPatchFunctionObject.H

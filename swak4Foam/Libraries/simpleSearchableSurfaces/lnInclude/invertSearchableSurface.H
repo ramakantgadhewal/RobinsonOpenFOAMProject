@@ -1,1 +1,0 @@
-../Operations/invertSearchableSurface.H

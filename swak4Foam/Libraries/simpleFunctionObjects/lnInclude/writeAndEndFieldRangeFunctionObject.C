@@ -1,1 +1,0 @@
-../misc/writeAndEndFieldRangeFunctionObject/writeAndEndFieldRangeFunctionObject.C

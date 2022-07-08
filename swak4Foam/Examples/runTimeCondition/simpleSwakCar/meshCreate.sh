@@ -1,4 +1,0 @@
-#!/bin/bash
-
-blockMesh
-topoSet

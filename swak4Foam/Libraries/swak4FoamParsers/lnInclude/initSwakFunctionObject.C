@@ -1,1 +1,0 @@
-../initSwakFunctionObject.C

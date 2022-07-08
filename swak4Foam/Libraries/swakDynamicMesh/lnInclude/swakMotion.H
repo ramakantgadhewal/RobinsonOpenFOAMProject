@@ -1,1 +1,0 @@
-../solidBodyMotion/swakMotion.H

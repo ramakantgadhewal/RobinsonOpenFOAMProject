@@ -1,1 +1,0 @@
-../WriteIfInterpreterFunctionObject.C

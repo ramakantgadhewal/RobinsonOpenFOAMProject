@@ -1,1 +1,0 @@
-../helpers/printSwakVersion.H

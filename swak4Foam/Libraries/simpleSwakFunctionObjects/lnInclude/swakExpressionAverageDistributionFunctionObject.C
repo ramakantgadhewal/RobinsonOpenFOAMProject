@@ -1,1 +1,0 @@
-../general/swakExpressionAverageDistributionFunctionObject.C

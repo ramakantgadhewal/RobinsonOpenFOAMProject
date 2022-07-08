@@ -1,1 +1,0 @@
-../groovyTractionDisplacementFvPatchVectorField.C

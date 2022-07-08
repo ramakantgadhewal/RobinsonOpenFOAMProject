@@ -1,1 +1,0 @@
-../entryToExpression/dimensionedSphericalTensorEntryToExpression.C

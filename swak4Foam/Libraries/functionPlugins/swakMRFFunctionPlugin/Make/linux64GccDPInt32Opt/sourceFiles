@@ -1,6 +1,0 @@
-SOURCE = \
-swakMRFPluginFunctionBasis.C \
-MRFIncompressibleFunction.C \
-MRFCompressibleFunction.C \
-
-# sources

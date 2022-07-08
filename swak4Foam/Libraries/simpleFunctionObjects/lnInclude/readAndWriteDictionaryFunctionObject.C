@@ -1,1 +1,0 @@
-../misc/readAndWriteDictionary/readAndWriteDictionaryFunctionObject.C
