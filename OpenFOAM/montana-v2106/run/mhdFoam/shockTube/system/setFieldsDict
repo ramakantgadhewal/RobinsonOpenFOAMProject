@@ -15,9 +15,9 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-defaultFieldValues ( volVectorFieldValue U (0 0 0) volVectorFieldValue B (0.75 -1.0 0) volScalarFieldValue p 0.1 volScalarFieldValue T 2.821728e-3); //right side
+defaultFieldValues ( volVectorFieldValue U (0 0 0) volVectorFieldValue B (0.75 -1.0 0) volScalarFieldValue p 0.8 ); //right side
 
-regions         ( boxToCell { box (-0.5 -1 -1) (0.0 1 1) ; fieldValues ( volScalarFieldValue p 1 volVectorFieldValue B (0.75 1 0) volScalarFieldValue T 3.468e-3 ) ; } );//left side
+regions         ( boxToCell { box (-0.5 -1 -1) (0.0 1 1) ; fieldValues ( volScalarFieldValue p 1 volVectorFieldValue B (0.75 1 0)  ) ; } );//left side
 
 
 // ************************************************************************* //

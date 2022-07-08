@@ -1,0 +1,63 @@
+# 1 "Make/options"
+# 1 "<built-in>"
+# 1 "<command-line>"
+
+
+
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 6 "<command-line>" 2
+# 1 "Make/options"
+include $(OBJECTS_DIR)/../../../../rules/versionOptions
+
+EXE_INC = -I$(FOAM_SRC)/finiteVolume/lnInclude -I$(FOAM_SRC)/sampling/lnInclude -I$(FOAM_SRC)/meshTools/lnInclude $(SWAP_PYTHON_NO_WARNINGS) $(FOAM_DEV_OPTION) 	$(SWAK_PYTHON3_INCLUDE) -I../swakGeneralLanguageIntegration/lnInclude 	-I../../swak4FoamParsers/lnInclude 	-I../../simpleFunctionObjects/lnInclude
+# 13 "Make/options"
+ 
+LIB_LIBS = 	$(SWAK_PYTHON3_LINK) 	-L$(FOAM_USER_LIBBIN) -lswakGeneralLanguageIntegration 	-lswak4FoamParsers 	-lsimpleFunctionObjects

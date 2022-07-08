@@ -1,0 +1,11 @@
+SOURCE = \
+facInterpolationFunctionPlugin.C \
+facGradFunctionPlugin.C \
+facLnGradFunctionPlugin.C \
+facDivFunctionPlugin.C \
+facConvectionDivFunctionPlugin.C \
+facLaplacianFunctionPlugin.C \
+facCoeffLaplacianFunctionPlugin.C \
+facEdgeCoeffLaplacianFunctionPlugin.C \
+
+# sources

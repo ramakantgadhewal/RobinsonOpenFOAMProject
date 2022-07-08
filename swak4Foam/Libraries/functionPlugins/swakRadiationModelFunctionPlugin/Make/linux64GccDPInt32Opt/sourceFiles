@@ -1,0 +1,4 @@
+SOURCE = \
+swakRadiationModelPluginFunction.C \
+
+# sources

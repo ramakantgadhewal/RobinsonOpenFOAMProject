@@ -1,0 +1,9 @@
+SOURCE = \
+expressionSource.C \
+forceEquation.C \
+swakSetValues.C \
+swakExplicitSources.C \
+swakImplicitSources.C \
+SwakSetTemperature.C \
+
+# sources

@@ -1,0 +1,8 @@
+SOURCE = \
+luaInterpreterWrapper.C \
+luaIntegrationFunctionObject.C \
+makeFunctionObjects.C \
+LuaFoamDictionaryParserDriver.C \
+functions4Lua.C \
+
+# sources

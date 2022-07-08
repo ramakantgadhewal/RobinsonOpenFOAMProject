@@ -1,0 +1,7 @@
+SOURCE = \
+Python3FoamDictionaryParserDriver.C \
+python3InterpreterWrapper.C \
+python3IntegrationFunctionObject.C \
+makeFunctionObjects.C \
+
+# sources

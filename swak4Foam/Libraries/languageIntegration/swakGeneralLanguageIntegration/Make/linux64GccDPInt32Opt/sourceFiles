@@ -1,0 +1,6 @@
+SOURCE = \
+generalInterpreterWrapper.C \
+scriptableFvSolutionFvSchemesFunctionObject.C \
+swakScriptableFvPatchFields.C \
+
+# sources

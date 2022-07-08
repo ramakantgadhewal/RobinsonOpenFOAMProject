@@ -1,0 +1,6 @@
+SOURCE = \
+courantIncompressiblePluginFunction.C \
+courantCompressiblePluginFunction.C \
+streamFunctionPluginFunction.C \
+
+# sources

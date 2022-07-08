@@ -1,0 +1,8 @@
+SOURCE = \
+mqFaceNonOrthoPluginFunction.C \
+mqFaceSkewnessPluginFunction.C \
+mqCellAspectRatioPluginFunction.C \
+mqCellFaceNrPluginFunction.C \
+mqCellShapePluginFunction.C \
+
+# sources

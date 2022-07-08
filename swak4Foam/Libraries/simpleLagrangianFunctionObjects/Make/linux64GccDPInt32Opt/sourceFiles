@@ -1,0 +1,8 @@
+SOURCE = \
+EvolveSolidParticleCloudFunctionObject.C \
+EvolveKinematicCloudFunctionObject.C \
+EvolveThermoCloudFunctionObject.C \
+EvolveReactingCloudFunctionObject.C \
+EvolveReactingMultiphaseCloudFunctionObject.C \
+
+# sources

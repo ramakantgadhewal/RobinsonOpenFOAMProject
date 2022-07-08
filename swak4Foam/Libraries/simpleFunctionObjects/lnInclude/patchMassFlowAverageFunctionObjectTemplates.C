@@ -1,0 +1,1 @@
+../patch/patchMassFlowAverageFunctionObject/patchMassFlowAverageFunctionObjectTemplates.C
