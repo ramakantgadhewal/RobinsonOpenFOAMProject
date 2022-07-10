@@ -20,24 +20,19 @@ dimensions      [0 1 -1 0 0 0 0];
 
 internalField   uniform (0 0 0);
 
-
 boundaryField
 {
-
     top
     {
-        type        cyclic;
+        type            cyclic;
     }
-
     bottom
     {
-        type        cyclic;
+        type            cyclic;
     }
-
     left
     {
-       type            cyclic;
-
+        type            cyclic;
     }
     right
     {
@@ -48,5 +43,6 @@ boundaryField
         type            empty;
     }
 }
+
 
 // ************************************************************************* //
