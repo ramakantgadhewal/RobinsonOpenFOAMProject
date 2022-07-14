@@ -1,0 +1,45 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      funkySetFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+expressions
+(
+
+	setU
+	{
+
+		field U;
+		expression "vector(-sin(pos().y),sin(pos().x),0)";
+		keepPatches true;
+	}
+
+	setB
+	{
+
+		field B;
+		expression "vector(-sin(pos().y),sin(2*pos().x),0)";
+		keepPatches true;
+	}
+
+	setp
+	{
+
+		field p;
+		expression "3/5";
+		keepPatches true;
+	}
+
+);
