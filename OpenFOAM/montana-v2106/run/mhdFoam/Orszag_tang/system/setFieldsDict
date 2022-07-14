@@ -1,0 +1,38 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+defaultFieldValues
+(
+    volVectorFieldValue  (0 0 0)
+);
+
+regions
+(
+    boxToCell
+    {
+        box (0.0 $magnet_IR -0.1)($m1x2 $magnet_OR 0.2);
+        fieldValues
+        (
+            volVectorFieldValue Jw (0 0 35.e6)
+        );
+    }
+);
+
+
+
+// ************************************************************************* //
