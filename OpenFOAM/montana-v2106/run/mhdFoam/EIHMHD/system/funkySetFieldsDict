@@ -15,6 +15,37 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+// Using a two-dimensional Fourier Series
+// to set initial conditions
+
+// f(x,y) = sum 
+
+
+L0 1;   // 1 meter
+
+PL  #calc"2 * M_PI * $L0" ; // 2 pi l0, 
+
+k 	3;	// 3 <= k <= 4
+
+// somehow set a vector equal to this function
+// define A_mn, B_mn, C_mn, and D_mn
+
+nPL  #calc"-2 * M_PI * $L0";	// - PL
+/*
+int final;
+
+for(int m = 0; m < k; m++)	
+{
+	for(int n = 0; n < k; n++)  
+	{
+		final += A_mn*cos(pi*m*x/PL)*cos(pi*n*y/PL) + B_mn*sin(pi*m*x/PL)*cos(pi*n*y/PL) +
+		C_mn*cos(pi*m*x/PL)*sin(pi*n*y/PL) + D_mn*sin(pi*m*x/PL)*sin(pi*n*y/PL);
+	}
+}
+*/
+
+
+
 expressions
 (
 
@@ -22,7 +53,12 @@ expressions
 	{
 
 		field U;
-		expression "vector(-sin(pos().y),sin(pos().x),0)";
+		a0  0;
+		//expression "vector(2 * cos(pos().x),sin(pos().y),0)";
+		//expression "vector(cos(pos().x)+sin(pos().x), pos().y,0)";
+		phi  0.3;
+		//expression "vector(	$a0/2 + cos(pos().x) + sin(pos().x)	+ cos(2*pos().x) + sin(2*pos().x) + cos(3*pos().x) + sin(3*pos().x), $a0/2 + cos(pos().y) + sin(pos().y) + cos(2*pos().y) + sin(2*pos().y) + cos(3*pos().y) + sin(3*pos().y),0)";}
+		expression "vector(	$a0/2 + cos(pos().x + $phi) + sin(pos().x + $phi)	+ cos(2*pos().x + $phi) + sin(2*pos().x + $phi) + cos(3*pos().x + $phi) + sin(3*pos().x + $phi) + cos(4*pos().x + $phi) + sin(4*pos().x + $phi), $a0/2 + cos(pos().y) + sin(pos().y) + cos(2*pos().y) + sin(2*pos().y) + cos(3*pos().y) + sin(3*pos().y) + cos(4*pos().y) + sin(4*pos().y),0)";
 		keepPatches true;
 	}
 
@@ -30,7 +66,9 @@ expressions
 	{
 
 		field B;
-		expression "vector(-sin(pos().y),sin(2*pos().x),0)";
+		a0  0;
+		//expression "vector(cos(pos().x),sin(pos().y),0)";
+		expression "vector(	$a0/2 + cos(pos().x) + sin(pos().x)	+ cos(2*pos().x) + sin(2*pos().x) + cos(3*pos().x) + sin(3*pos().x), $a0/2 + cos(pos().y) + sin(pos().y) + cos(2*pos().y) + sin(2*pos().y) + cos(3*pos().y) + sin(3*pos().y),0)";
 		keepPatches true;
 	}
 
